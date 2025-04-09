@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Entferne die alten :root und body Definitionen */
+/* Diese werden jetzt durch Tailwind und layout.tsx gehandhabt */
