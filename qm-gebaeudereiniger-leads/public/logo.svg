@@ -1,0 +1,40 @@
+<svg width='400' height='200' viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg'>
+    <style>
+        .title { font: bold 24px Arial, sans-serif; fill: #1e3a8a; }
+        .subtitle { font: 14px Arial, sans-serif; fill: #1e3a8a; }
+        .badge { fill: #15803d; }
+        .badge-text { font: bold 12px Arial, sans-serif; fill: #ffffff; }
+        .building { fill: #4f46e5; }
+        .window { fill: #ffffff; }
+        .check-circle { fill: #15803d; }
+        .check { stroke: #ffffff; stroke-width:4; fill: none; }
+    </style>
+
+    <rect x='0' y='0' width='400' height='200' fill='none'/>
+
+    <g transform='translate(30,50)'>
+        <!-- Building -->
+        <rect class='building' x='0' y='20' width='90' height='90' rx='4'/>
+        <rect class='window' x='15' y='35' width='20' height='20' rx='2'/>
+        <rect class='window' x='55' y='35' width='20' height='20' rx='2'/>
+        <rect class='window' x='15' y='70' width='20' height='20' rx='2'/>
+        <rect class='window' x='55' y='70' width='20' height='20' rx='2'/>
+        <!-- Sparkles -->
+        <polygon points='45,0 50,10 60,12 50,14 45,24 40,14 30,12 40,10' fill='#fde047'/>
+        <polygon points='15,10 18,16 24,17 18,18 15,24 12,18 6,17 12,16' fill='#fde047'/>
+    </g>
+
+    <!-- Check circle -->
+    <circle class='check-circle' cx='140' cy='95' r='32'/>
+    <polyline class='check' points='125,95 138,108 155,80' />
+
+    <!-- ISO badges -->
+    <rect class='badge' x='190' y='60' width='110' height='28' rx='4'/>
+    <text class='badge-text' x='245' y='79' text-anchor='middle'>ISO 9001</text>
+    <rect class='badge' x='190' y='100' width='110' height='28' rx='4'/>
+    <text class='badge-text' x='245' y='119' text-anchor='middle'>ISO 14001</text>
+
+    <!-- Titles -->
+    <text class='title' x='30' y='165'>QM Gebäudereiniger</text>
+    <text class='subtitle' x='30' y='185'>Mehr Aufträge durch zertifizierte Qualität</text>
+</svg>

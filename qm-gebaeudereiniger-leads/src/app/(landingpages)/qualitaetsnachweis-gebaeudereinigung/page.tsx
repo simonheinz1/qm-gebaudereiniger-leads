@@ -11,46 +11,55 @@ export const metadata: Metadata = {
 
 export default function QualitaetsnachweisPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-green-700">
-        Praxisnaher Qualitätsnachweis Gebäudereinigung: Effizienz steigern & Kunden überzeugen
+    <div className="space-y-8 max-w-4xl mx-auto px-4">
+      <h1 className="text-3xl md:text-4xl font-bold text-green-700 mb-4">
+        Mehr als nur ein Zertifikat: Ihr praxisnaher Qualitätsnachweis für die Gebäudereinigung
       </h1>
-      <p className="text-lg">
-        Sie möchten Ihre Abläufe verbessern, Kunden begeistern und Ihr Team stärken, ohne sich in komplexer Bürokratie zu verlieren? Unser praxisorientierter Ansatz für Qualitäts- und Umweltmanagement ist speziell für die Gebäudereinigungsbranche entwickelt.
+      <p className="text-lg text-gray-700 mb-6">
+        Wollen Sie Ihre Betriebsabläufe spürbar verbessern, die Zufriedenheit Ihrer Kunden steigern und Ihr Team motivieren? Unser Qualitäts- und Umweltnachweis (QM/UM) hilft Ihnen dabei – effizient, verständlich und speziell für Gebäudereiniger entwickelt von einem erfahrenen Auditor.
       </p>
 
-      <div className="p-4 bg-green-50 rounded-lg">
-        <h2 className="text-2xl font-semibold mb-3">Ihre Vorteile auf einen Blick:</h2>
-        <ul className="list-disc list-inside space-y-2 mb-4">
+      <section className="p-6 bg-gradient-to-r from-green-50 to-teal-50 rounded-lg shadow-md">
+        <h2 className="text-2xl font-semibold text-green-800 mb-3">Der Nutzen im Fokus – Nicht die Bürokratie</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          Viele denken bei QM/UM an komplizierte ISO-Normen und Papierkram. Mein Ansatz, basierend auf meiner Erfahrung als <strong>Auditor (Normazert)</strong>, konzentriert sich auf das, was Ihnen wirklich hilft:
+        </p>
+        <h3 className="text-xl font-semibold text-green-700 mt-5 mb-2">Ihr Mehrwert durch den praxisnahen Nachweis:</h3>
+        <ul className="list-disc list-inside space-y-3 text-lg text-gray-700 mb-4">
           <li>
-            <strong>Effizienz steigern:</strong> Optimierte Prozesse sparen Zeit und Kosten bei der täglichen Arbeit.
+            <strong>Spürbar effizientere Abläufe:</strong> Klare Arbeitsanweisungen und Checklisten reduzieren Fehler, sparen Zeit bei der Einarbeitung und senken den Materialverbrauch.
           </li>
           <li>
-            <strong>Kunden überzeugen:</strong> Ein sichtbarer Qualitätsnachweis und gelebtes Umweltbewusstsein schaffen Vertrauen und binden Kunden langfristig.
+            <strong>Begeisterte Kunden:</strong> Nachweisbare Qualität und ein sichtbares Umweltengagement schaffen Vertrauen, führen zu weniger Reklamationen und stärken die Kundenbindung.
           </li>
           <li>
-            <strong>Mitarbeiter motivieren:</strong> Klare Abläufe und Verantwortlichkeiten fördern die Zufriedenheit im Team.
+            <strong>Motivierteres Team:</strong> Klare Strukturen, definierte Verantwortlichkeiten und nachvollziehbare Prozesse erhöhen die Mitarbeiterzufriedenheit.
           </li>
           <li>
-            <strong>Rechtssicherheit erhöhen:</strong> Systematische Einhaltung von Vorschriften minimiert Risiken.
+            <strong>Weniger Risiko, mehr Sicherheit:</strong> Systematische Einhaltung wichtiger Vorschriften (Arbeitssicherheit, Umweltschutz) gibt Ihnen Sicherheit.
           </li>
           <li>
-            <strong>Fokus auf das Wesentliche:</strong> Wir konzentrieren uns auf das, was Ihnen in der Praxis wirklich hilft – ohne unnötigen Ballast.
+            <strong>Konzentration aufs Wesentliche:</strong> Wir implementieren nur das, was für Ihren Erfolg als Gebäudereiniger wirklich zählt – verständlich und umsetzbar.
           </li>
         </ul>
-        <p>
-          Im Gegensatz zur reinen DIN ISO-Zertifizierung steht bei unserem Ansatz der direkte, praktische Nutzen für Ihr Gebäudereinigungs-Unternehmen im Vordergrund – weniger Theorie, mehr spürbare Verbesserung im Arbeitsalltag.
+        <p className="text-lg text-gray-700 italic">
+          Dieser Ansatz geht über ein reines Zertifikat hinaus – er ist ein Werkzeug zur kontinuierlichen Verbesserung Ihres Betriebs.
         </p>
-      </div>
+        <div className="mt-6">
+          <Link href="/leistungen" className="text-blue-600 font-semibold hover:underline">
+            Wie funktioniert der Prozess? Mehr erfahren &rarr;
+          </Link>
+        </div>
+      </section>
 
-      <div className="text-center mt-8">
-        <h2 className="text-2xl font-semibold mb-4">Bereit für spürbare Verbesserungen in Ihrem Betrieb?</h2>
-        <p className="mb-4">Lassen Sie uns unverbindlich darüber sprechen, wie unser Ansatz Ihr Unternehmen voranbringen kann.</p>
-        <Link href="/kontakt"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition duration-300">
-          Kostenloses Erstgespräch vereinbaren
+      <section className="text-center mt-12 border-t pt-10">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-5">Starten Sie die Optimierung Ihres Betriebs!</h2>
+        <p className="text-lg text-gray-700 mb-6">Entdecken Sie, wie einfach und effektiv Qualitäts- und Umweltmanagement sein kann, wenn es auf die Praxis zugeschnitten ist. Lassen Sie uns unverbindlich sprechen.</p>
+        <Link href="/kontakt" 
+            className="inline-block bg-green-600 text-white px-10 py-4 rounded-lg text-xl font-semibold hover:bg-green-700 transition duration-300 shadow-lg hover:shadow-xl">
+          Kostenloses Potenzialgespräch
         </Link>
-      </div>
+      </section>
     </div>
   );
 } 

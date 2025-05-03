@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable}`}>
-      <body className="font-sans text-gray-800 antialiased">
+      <body className="font-sans text-gray-800 antialiased bg-gray-50">
         <Header />
-        <main className="container mx-auto px-4 py-12 pt-20 min-h-screen">
+        <main className="container mx-auto px-4 py-16 pt-24 min-h-screen">
           {children}
         </main>
         <Footer />

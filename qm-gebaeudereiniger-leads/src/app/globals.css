@@ -4,3 +4,65 @@
 
 /* Entferne die alten :root und body Definitionen */
 /* Diese werden jetzt durch Tailwind und layout.tsx gehandhabt */
+
+/* Print specific styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  /* Make the printable content and its children visible */
+  .printable-content,
+  .printable-content * {
+    visibility: visible;
+  }
+  /* Position the printable content to take the whole page */
+  .printable-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 !important; /* Reset margins */
+    padding: 1rem !important; /* Add some padding for print */
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important; /* Ensure white background */
+  }
+  /* Hide elements specifically marked for non-print */
+  .print\:hidden {
+    display: none !important;
+  }
+  /* Improve table printing (if used in printable content) */
+  .printable-content table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10pt; /* Adjust font size for print */
+  }
+   .printable-content th,
+   .printable-content td {
+       border: 1px solid #ccc;
+       padding: 0.3rem;
+       text-align: left;
+   }
+    .printable-content thead {
+        background-color: #eee; /* Light background for header */
+    }
+    /* Ensure table rows/list items don't break across pages if possible */
+    .printable-content tr,
+    .printable-content li,
+    .printable-content > div /* Adjust selector if needed for checklist grouping */
+    {
+        break-inside: avoid;
+    }
+    /* Specific print styles for checklist can be added here */
+    .printable-content .print\:text-sm { font-size: 10pt; }
+    .printable-content .print\:text-black { color: black; }
+    .printable-content .print\:font-bold { font-weight: bold; }
+    .printable-content .print\:p-1 { padding: 0.25rem; }
+    .printable-content .print\:border-b { border-bottom-width: 1px; }
+    .printable-content .print\:border-gray-200 { border-color: #e5e7eb; }
+    .printable-content .print\:rounded-none { border-radius: 0; }
+    .printable-content .print\:text-lg { font-size: 12pt; }
+    .printable-content .print\:mb-2 { margin-bottom: 0.5rem; }
+    .printable-content .print\:text-xs { font-size: 8pt; }
+    .printable-content .print\:mt-0 { margin-top: 0; }
+}

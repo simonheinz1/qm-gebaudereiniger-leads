@@ -12,11 +12,22 @@ module.exports = {
         // Definiere 'sans' als Standard-Schriftart und verweise auf die CSS-Variable für Inter
         sans: ['var(--font-inter)', 'sans-serif'],
       },
-      // Hier könnten später weitere Theme-Erweiterungen hinzukommen (z.B. eigene Farben)
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+         // Benutzerdefinierte Farben hier, falls vorhanden
+         // Beispiel:
+         // 'brand-blue': '#007bff',
+         // 'brand-green': '#28a745',
+       },
     },
   },
   plugins: [
     // Aktiviere das Typography-Plugin für das Styling von Textinhalten (Blog etc.)
     require('@tailwindcss/typography'),
+    // Fügen Sie hier weitere Tailwind Plugins hinzu
   ],
 }; 

@@ -2,9 +2,34 @@ import { MetadataRoute } from 'next'
 
 // TODO: Dynamische Routen (Blog, Fallstudien, Landingpages) hinzufügen
 // TODO: Basis-URL aus Umgebungsvariablen holen
-const BASE_URL = 'https://DEINE_DOMAIN.de'; // Bitte anpassen!
+const BASE_URL = 'https://qm-gebaeudereiniger.de'; // Angepasst!
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Liste der Landing Page Pfade (ohne BASE_URL)
+  const landingPages = [
+    '/din-9001-gebaeudereiniger',
+    '/din-14001-gebaeudereiniger',
+    '/kunden-gewinnen-gebaeudereiniger',
+    '/qm-fuer-ausschreibungen',
+    '/zertifizierung-ausschreibung',
+    '/praxis-qm-gebaeudereiniger',
+    '/lebensmittelindustrie-gastronomie-reinigung',
+    '/kmu-qm-gebaeudereiniger',
+    '/krankenhausreinigung-qm',
+    '/qualitaetsnachweis-gebaeudereinigung',
+    '/nachhaltigkeit-gebaeudereinigung',
+    '/nachhaltigkeit-gebaeudereiniger',
+     // Füge hier weitere Landing Pages hinzu, falls nötig
+  ];
+
+  const landingPageEntries = landingPages.map((path) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as MetadataRoute.Sitemap[0]['changeFrequency'], // Korrekter Typ
+    priority: 0.7,
+  }));
+
+
   return [
     {
       url: `${BASE_URL}/`,
@@ -42,6 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    // Füge hier weitere statische oder später dynamische URLs hinzu
+    // Dynamisch hinzugefügte Landing Pages
+    ...landingPageEntries,
+    // Füge hier weitere statische oder später dynamische URLs hinzu (z.B. Blog, Werkzeuge)
   ]
 } 
